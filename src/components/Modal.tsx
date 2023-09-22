@@ -145,7 +145,7 @@ export function Modal() {
 									htmlFor="fNameArea"
 									className={cx("label", errors.firstname && "label--error")}
 								>
-									{errors.firstname ? (
+									{errors?.firstname?.type == "required" ?(
 										"First Name is required!"
 									) :
 									errors?.firstname?.type=="minLength" ? ("Minimum of 4 charaters"): errors?.firstname?.type == "maxLength"?("Maximum of 48 characters") : (
@@ -160,7 +160,7 @@ export function Modal() {
 									name="firstname"
 									placeholder="ex: John"
 									className={cx("area", errors.firstname && "input--error")}
-									{...register('firstname', { required: "Fist Name is Required", minLength: 4, maxLength: 48 })}
+									{...register('firstname', { required: "First Name is Required", minLength: 4, maxLength: 48 })}
 									value={userfirstname}
 									onChange={(e)=>onchangefirstname(e)}
 								/>
@@ -171,9 +171,9 @@ export function Modal() {
 									htmlFor="lNameArea"
 									className={cx("label", errors.lastname && "label--error")}
 								>
-									{errors.lastname ? (
-										`${errors.lastname.message}`
-									) : errors?.lastname?.type == "maxLength"?("Maximum of 44 characters") : (
+									{errors?.lastname?.type =="required" ? (
+										`Last Name is required`
+									) : errors?.lastname?.type == "maxLength"?("Maximum of 55 characters") : (
 										<>
 											Last Name&nbsp;<span className="label__required">*</span>
 										</>
@@ -194,40 +194,6 @@ export function Modal() {
 							</div>
 
 							
-
-							{/* <div className="form__element">
-								<label
-									htmlFor="phoneNumber"
-									className={cx("label", errors.phone && "label--error")}
-								>
-									{errors.phone ? (
-										`${errors.phone.message}`
-									) : (
-										<>
-											Phone&nbsp;<span className="label__required">*</span>
-										</>
-									)}
-								</label>
-								<input
-									type="number"
-									id="phoneNumber"
-									name="phone"
-									placeholder="Phone"
-									className={cx("input", errors.phone && "input--error")}
-									{...register('phone', {
-										required: "Phone is Required",
-										minLength: {
-											value: 11,
-											message: "Minimum of 11 digits",
-										},
-										maxLength: {
-											value: 12,
-											message: "Maximum of 12 digits",
-										},
-									})}
-								/>
-							</div> */}
-
 							<div className="form__action">
 								<button
 									className="btn btn__icon btn__cancel"

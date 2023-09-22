@@ -42,8 +42,7 @@ export default async (req: any, res: any) => {
 			try {
 				const userId = req.headers.id;
 				const uploadedUser = req.body;
-				const index = collection.findIndex((user) => user.id == userId);
-				if (index != -1) {
+				if (userId != -1) {
 					res.status(200).json({uploadedUser: uploadedUser});
 				} else {
 					res.status(404).json({ error: 'User not found' });
