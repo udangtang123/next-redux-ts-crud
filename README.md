@@ -3,10 +3,15 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Features
 
 Next.js
+
 React.js
+
 Redux
+
 TypeScript
+
 SASS/SCSS
+
 ESLint
  
 ## Getting Started
