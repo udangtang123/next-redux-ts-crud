@@ -22,11 +22,12 @@ Run the development server:
  
 ```bash
 clone this repository
+
 https://github.com/udangtang123/next-redux-ts-crud.git
 
 install packages
-cd next-redux-ts-crud
 
+cd next-redux-ts-crud
 npm install
 
 run server
