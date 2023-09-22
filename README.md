@@ -10,8 +10,10 @@ First, run the development server:
 ```bash
 clone this repository
 https://github.com/udangtang123/next-redux-ts-crud.git
+
 install packages
 npm install
+
 run server
 npm run dev
 # or
